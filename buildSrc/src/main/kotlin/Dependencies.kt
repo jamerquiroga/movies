@@ -19,6 +19,7 @@ object ToolsVersions {
 
 object KotlinLibraries {
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
+    const val kotlinSerializationJson = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinSerializationJson}"
 }
 
 object AndroidxLibraries {
@@ -43,7 +44,14 @@ object Google {
 
 object GradleDependencies {
     const val buildGradle = "com.android.tools.build:gradle:${Versions.buildGradle}"
-    val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+    const val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+    const val kotlinSerialization = "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlinSerialization}"
+}
+
+object NetworkLibraries {
+    const val kotlinSerializationConverter = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${Versions.kotlinSerializationConverter}"
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
 }
 
 object Versions {
@@ -56,4 +64,9 @@ object Versions {
     const val junit = "4.+"
     const val material = "1.3.0"
     const val buildGradle = "4.1.1"
+    const val kotlinSerialization = "1.4.31"
+    const val kotlinSerializationJson = "1.2.1"
+    const val kotlinSerializationConverter = "0.8.0"
+    const val retrofit = "2.9.0"
+    const val loggingInterceptor = "4.9.1"
 }
