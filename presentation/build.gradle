@@ -39,6 +39,8 @@ dependencies {
     implementation AndroidxLibraries.appCompat
     implementation AndroidxLibraries.constraintLayout
     implementation Google.material
+    implementation AndroidxLibraries.lifecycleViewModel
+    implementation AndroidxLibraries.lifecycleExtensions
 
     testImplementation TestLibraries.junit
 
