@@ -8,6 +8,5 @@ data class Movie(
     val backdropPath: String,
     val originalLanguage: String,
     val popularity: Double,
-    val voteAverage: Double,
-    val favorite: Boolean
+    val voteAverage: Double
 )
