@@ -38,9 +38,6 @@ class MainViewModel @Inject constructor(
             val result = with(dispatcher) {
                 getMoviesUseCase.invoke()
             }
-            result.forEach {
-                Log.e("movies", it.title)
-            }
             _movieList.value = movieMapper.map(result)
         }
     }
