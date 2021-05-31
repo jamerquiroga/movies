@@ -1,6 +1,5 @@
 package com.jquiroga.movies.features.popular.view
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -10,7 +9,6 @@ import com.jquiroga.movies.core.extensions.safeLaunch
 import com.jquiroga.movies.core.extensions.with
 import com.jquiroga.movies.core.failure.FailureMapper
 import com.jquiroga.movies.core.failure.FailureModel
-import com.jquiroga.movies.core.utils.defaultCoroutineDispatcher
 import com.jquiroga.movies.features.popular.mapper.MovieMapper
 import com.jquiroga.movies.features.popular.model.MovieModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -22,7 +20,7 @@ class MainViewModel @Inject constructor(
     private val getMoviesUseCase: GetMoviesUseCase,
     private val movieMapper: MovieMapper,
     private val failureMapper: FailureMapper,
-    private val dispatcher: CoroutineDispatcher = defaultCoroutineDispatcher
+    private val dispatcher: CoroutineDispatcher
 ) : ViewModel() {
 
     private val _failureModel = MutableLiveData<FailureModel>()
