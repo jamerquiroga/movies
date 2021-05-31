@@ -8,6 +8,7 @@ buildscript {
         classpath GradleDependencies.buildGradle
         classpath GradleDependencies.kotlinGradle
         classpath GradleDependencies.kotlinSerialization
+        classpath GradleDependencies.hiltGradle
     }
 }
 

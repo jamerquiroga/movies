@@ -45,6 +45,8 @@ object TestLibraries {
 
 object Google {
     const val material = "com.google.android.material:material:${Versions.material}"
+    const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
+    const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
 }
 
 object GradleDependencies {
@@ -52,6 +54,7 @@ object GradleDependencies {
     const val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     const val kotlinSerialization =
         "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlinSerialization}"
+    const val hiltGradle = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
 }
 
 object NetworkLibraries {
@@ -79,4 +82,5 @@ object Versions {
     const val loggingInterceptor = "4.9.1"
     const val lifecycleViewModel = "2.3.1"
     const val lifecycleExtensions = "2.2.0"
+    const val hilt = "2.35"
 }
