@@ -44,6 +44,7 @@ dependencies {
     implementation AndroidxLibraries.lifecycleViewModel
     implementation AndroidxLibraries.lifecycleExtensions
     implementation Google.hilt
+    implementation AndroidxLibraries.activity
 
     kapt Google.hiltCompiler
 
