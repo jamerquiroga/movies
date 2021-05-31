@@ -32,6 +32,7 @@ object AndroidxLibraries {
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewModel}"
     const val lifecycleExtensions =
         "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleExtensions}"
+    const val activity = "androidx.activity:activity-ktx:${Versions.activity}"
 }
 
 object AndroidxTestLibraries {
@@ -65,6 +66,10 @@ object NetworkLibraries {
         "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
 }
 
+object JavaLibraries {
+    const val javaInject = "javax.inject:javax.inject:${Versions.javaInject}"
+}
+
 object Versions {
     const val kotlin = "1.4.31"
     const val coreKtx = "1.5.0"
@@ -83,4 +88,6 @@ object Versions {
     const val lifecycleViewModel = "2.3.1"
     const val lifecycleExtensions = "2.2.0"
     const val hilt = "2.35"
+    const val javaInject = "1"
+    const val activity = "1.2.3"
 }
