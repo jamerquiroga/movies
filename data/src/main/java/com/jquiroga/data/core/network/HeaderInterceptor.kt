@@ -14,6 +14,6 @@ class HeaderInterceptor : Interceptor {
     internal companion object {
         private const val AUTHORIZATION = "Authorization"
         private const val API_KEY =
-            "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmYzNDhlNzQ1NjZjMDJjZTQzZWU1M2MwODBiZmIwMyIsInN1YiI6IjVjNjA3ZWEwOTI1MTQxNDIwNmI3Mjc3NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.XsoOOUi_l78xmhf2PCmijJmqaGI54z2yFLXStx8NVaQ"
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmYzNDhlNzQ1NjZjMDJjZTQzZWU1M2MwODBiZmIwMyIsInN1YiI6IjVjNjA3ZWEwOTI1MTQxNDIwNmI3Mjc3NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.XsoOOUi_l78xmhf2PCmijJmqaGI54z2yFLXStx8NVaQ"
     }
 }
