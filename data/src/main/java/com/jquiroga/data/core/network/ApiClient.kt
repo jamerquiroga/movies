@@ -11,7 +11,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import java.util.concurrent.TimeUnit
 
-@ExperimentalSerializationApi
+
 object ApiClient {
 
     private const val CONNECTION_TIMEOUT: Long = 30L
