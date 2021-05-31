@@ -3,8 +3,9 @@ package com.jquiroga.data.mapper
 import com.jquiroga.data.core.mapper.SingleMapper
 import com.jquiroga.data.entity.MovieEntity
 import com.jquiroga.domain.entity.Movie
+import javax.inject.Inject
 
-class MovieRemoteMapper : SingleMapper<MovieEntity, Movie>() {
+class MovieRemoteMapper @Inject constructor(): SingleMapper<MovieEntity, Movie>() {
 
     override fun map(value: MovieEntity) = Movie(
         title = value.title,

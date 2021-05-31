@@ -1,5 +1,6 @@
 package com.jquiroga.movies.features.popular.view
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,9 +13,12 @@ import com.jquiroga.movies.core.failure.FailureModel
 import com.jquiroga.movies.core.utils.defaultCoroutineDispatcher
 import com.jquiroga.movies.features.popular.mapper.MovieMapper
 import com.jquiroga.movies.features.popular.model.MovieModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
+import javax.inject.Inject
 
-class MainViewModel(
+@HiltViewModel
+class MainViewModel @Inject constructor(
     private val getMoviesUseCase: GetMoviesUseCase,
     private val movieMapper: MovieMapper,
     private val failureMapper: FailureMapper,
@@ -33,6 +37,9 @@ class MainViewModel(
         viewModelScope.safeLaunch(::handleException) {
             val result = with(dispatcher) {
                 getMoviesUseCase.invoke()
+            }
+            result.forEach {
+                Log.e("movies", it.title)
             }
             _movieList.value = movieMapper.map(result)
         }

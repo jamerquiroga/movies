@@ -7,8 +7,9 @@ import com.jquiroga.domain.exception.NetworkConnectionException
 import com.jquiroga.domain.exception.ServerErrorException
 import com.jquiroga.domain.exception.UnauthorizedException
 import java.net.SocketTimeoutException
+import javax.inject.Inject
 
-class FailureMapper : SingleMapper<Throwable, FailureModel>() {
+class FailureMapper @Inject constructor(): SingleMapper<Throwable, FailureModel>() {
 
     override fun map(value: Throwable) = when (value) {
         is NetworkConnectionException -> FailureModel(

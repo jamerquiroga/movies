@@ -6,8 +6,9 @@ import com.jquiroga.domain.entity.Movie
 import com.jquiroga.data.datasource.remote.source.abstraction.MovieRemoteSource
 import com.jquiroga.data.mapper.MovieRemoteMapper
 import com.jquiroga.domain.exception.EmptyDataException
+import javax.inject.Inject
 
-class MovieRemoteDataSource(
+class MovieRemoteDataSource @Inject constructor(
     private val movieApi: MovieApi,
     private val movieRemoteMapper: MovieRemoteMapper
 ) : MovieRemoteSource {
