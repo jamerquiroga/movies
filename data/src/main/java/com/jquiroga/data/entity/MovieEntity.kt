@@ -12,13 +12,13 @@ data class MovieEntity(
     val overview: String,
 
     @SerialName(FIELD_RELEASE_DATE)
-    val releaseDate: String,
+    val releaseDate: String? = null,
 
     @SerialName(FIELD_POSTER_PATH)
-    val posterPath: String,
+    val posterPath: String?,
 
     @SerialName(FIELD_BACKDROP_PATH)
-    val backdropPath: String,
+    val backdropPath: String?,
 
     @SerialName(FIELD_ORIGINAL_LANGUAGE)
     val originalLanguage: String,

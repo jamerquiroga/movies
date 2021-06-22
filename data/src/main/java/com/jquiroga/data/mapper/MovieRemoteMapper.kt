@@ -10,9 +10,9 @@ class MovieRemoteMapper @Inject constructor(): SingleMapper<MovieEntity, Movie>(
     override fun map(value: MovieEntity) = Movie(
         title = value.title,
         overview = value.overview,
-        releaseDate = value.releaseDate,
-        posterPath = value.posterPath,
-        backdropPath = value.backdropPath,
+        releaseDate = value.releaseDate.orEmpty(),
+        posterPath = value.posterPath.orEmpty(),
+        backdropPath = value.backdropPath.orEmpty(),
         originalLanguage = value.originalLanguage,
         popularity = value.popularity,
         voteAverage = value.voteAverage
