@@ -11,4 +11,9 @@ java {
 dependencies {
     implementation KotlinLibraries.kotlin
     implementation JavaLibraries.javaInject
+
+    testImplementation TestLibraries.junit
+    testImplementation TestLibraries.coroutinesTest
+    testImplementation TestLibraries.mockk
+    testImplementation TestLibraries.kluent
 }

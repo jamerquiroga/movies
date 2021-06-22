@@ -42,6 +42,9 @@ object AndroidxTestLibraries {
 
 object TestLibraries {
     const val junit = "junit:junit:${Versions.junit}"
+    const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesTest}"
+    const val mockk = "io.mockk:mockk:${Versions.mockk}"
+    const val kluent = "org.amshove.kluent:kluent-android:${Versions.kluent}"
 }
 
 object Google {
@@ -95,4 +98,7 @@ object Versions {
     const val javaInject = "1"
     const val activity = "1.2.3"
     const val glide = "4.12.0"
+    const val coroutinesTest = "1.3.5"
+    const val mockk = "1.9.3"
+    const val kluent = "1.61"
 }
