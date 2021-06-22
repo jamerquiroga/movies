@@ -8,3 +8,7 @@ object Error {
     const val NOT_DEFINED_ERROR_MESSAGE = "Not defined!"
     const val UNAUTHORIZED_ERROR_MESSAGE = "Unauthorized!"
 }
+
+object Image {
+    const val BASE_URL_IMAGE = "https://image.tmdb.org/t/p/w185"
+}
