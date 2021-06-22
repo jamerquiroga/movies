@@ -1,7 +1,6 @@
 package com.jquiroga.domain.usecase
 
 import com.jquiroga.domain.repository.MovieRepository
-import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -22,10 +21,8 @@ class GetMoviesUseCaseTest {
     }
 
     @Test
-    fun `When the use case is executed, then the repository function is executed`() =
+    fun `when the use case is executed, then the repository function is executed`() =
         runBlockingTest {
-
-            coEvery { movieRepository.getMovies() } returns emptyList()
 
             //When
             getMoviesUseCase.invoke()
