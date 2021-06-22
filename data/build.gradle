@@ -49,6 +49,9 @@ dependencies {
     kapt Google.hiltCompiler
 
     testImplementation TestLibraries.junit
+    testImplementation TestLibraries.coroutinesTest
+    testImplementation TestLibraries.mockk
+    testImplementation TestLibraries.kluent
 
     androidTestImplementation AndroidxTestLibraries.testExtJunit
     androidTestImplementation AndroidxTestLibraries.espressoCore
