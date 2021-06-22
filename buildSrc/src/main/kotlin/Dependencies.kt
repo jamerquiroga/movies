@@ -20,18 +20,18 @@ object ToolsVersions {
 object KotlinLibraries {
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
     const val kotlinSerializationJson =
-        "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinSerializationJson}"
+            "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinSerializationJson}"
 }
 
 object AndroidxLibraries {
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val constraintLayout =
-        "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+            "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val lifecycleViewModel =
-        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewModel}"
+            "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewModel}"
     const val lifecycleExtensions =
-        "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleExtensions}"
+            "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleExtensions}"
     const val activity = "androidx.activity:activity-ktx:${Versions.activity}"
 }
 
@@ -54,20 +54,24 @@ object GradleDependencies {
     const val buildGradle = "com.android.tools.build:gradle:${Versions.buildGradle}"
     const val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     const val kotlinSerialization =
-        "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlinSerialization}"
+            "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlinSerialization}"
     const val hiltGradle = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
 }
 
 object NetworkLibraries {
     const val kotlinSerializationConverter =
-        "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${Versions.kotlinSerializationConverter}"
+            "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${Versions.kotlinSerializationConverter}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val loggingInterceptor =
-        "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
+            "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
 }
 
 object JavaLibraries {
     const val javaInject = "javax.inject:javax.inject:${Versions.javaInject}"
+}
+
+object Glide {
+    const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
 }
 
 object Versions {
@@ -90,4 +94,5 @@ object Versions {
     const val hilt = "2.35"
     const val javaInject = "1"
     const val activity = "1.2.3"
+    const val glide = "4.12.0"
 }
