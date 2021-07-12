@@ -16,7 +16,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(
+class PopularMoviesViewModel @Inject constructor(
     private val getMoviesUseCase: GetMoviesUseCase,
     private val movieMapper: MovieMapper,
     private val failureMapper: FailureMapper,
