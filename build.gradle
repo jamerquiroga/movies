@@ -9,6 +9,7 @@ buildscript {
         classpath GradleDependencies.kotlinGradle
         classpath GradleDependencies.kotlinSerialization
         classpath GradleDependencies.hiltGradle
+        classpath GradleDependencies.navigationSafeArgs
     }
 }
 

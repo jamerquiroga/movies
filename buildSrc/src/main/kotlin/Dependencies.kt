@@ -33,11 +33,14 @@ object AndroidxLibraries {
     const val lifecycleExtensions =
             "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleExtensions}"
     const val activity = "androidx.activity:activity-ktx:${Versions.activity}"
+    const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 }
 
 object AndroidxTestLibraries {
     const val testExtJunit = "androidx.test.ext:junit:${Versions.testExtJunit}"
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
+    const val navigationTest = "androidx.navigation:navigation-testing:${Versions.navigation}"
 }
 
 object TestLibraries {
@@ -59,6 +62,7 @@ object GradleDependencies {
     const val kotlinSerialization =
             "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlinSerialization}"
     const val hiltGradle = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
+    const val navigationSafeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
 }
 
 object NetworkLibraries {
@@ -101,4 +105,5 @@ object Versions {
     const val coroutinesTest = "1.3.5"
     const val mockk = "1.9.3"
     const val kluent = "1.61"
+    const val navigation = "2.3.5"
 }

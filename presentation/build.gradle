@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -50,6 +51,8 @@ dependencies {
     implementation Google.hilt
     implementation AndroidxLibraries.activity
     implementation Glide.glide
+    implementation AndroidxLibraries.navigationFragment
+    implementation AndroidxLibraries.navigationUi
 
     kapt Google.hiltCompiler
 
@@ -57,6 +60,7 @@ dependencies {
 
     androidTestImplementation AndroidxTestLibraries.testExtJunit
     androidTestImplementation AndroidxTestLibraries.espressoCore
+    androidTestImplementation AndroidxTestLibraries.navigationTest
 
     implementation project(path: ':domain')
     implementation project(path: ':data')
