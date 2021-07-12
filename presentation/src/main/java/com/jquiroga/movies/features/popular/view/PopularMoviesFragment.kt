@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 import com.jquiroga.movies.core.extensions.gone
 import com.jquiroga.movies.core.failure.FailureModel
 
@@ -25,13 +25,13 @@ class PopularMoviesFragment : BaseFragment() {
 
     private val viewBinding get() = _viewBinding!!
 
-    private val mainViewModel by viewModels<MainViewModel>()
+    private val mainViewModel by viewModels<PopularMoviesViewModel>()
 
     private val popularMovieAdapter by lazy { PopularMovieAdapter() }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View {
         _viewBinding = FragmentPopularMoviesBinding.inflate(inflater, container, false)
         return viewBinding.root
@@ -47,7 +47,7 @@ class PopularMoviesFragment : BaseFragment() {
         mainViewModel.failureModel.observe(this, failureObserver)
     }
 
-    private fun setUpRecycler(){
+    private fun setUpRecycler() {
         viewBinding.recyclerPopularMovies.apply {
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
             adapter = popularMovieAdapter
@@ -60,7 +60,11 @@ class PopularMoviesFragment : BaseFragment() {
     }
 
     private val failureObserver = Observer<FailureModel> { failure ->
-        Toast.makeText(context, failure.message, Toast.LENGTH_SHORT).show()
+        Snackbar.make(
+                viewBinding.root,
+                failure.message,
+                Snackbar.LENGTH_SHORT
+        ).show()
     }
 
 }
