@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
-import com.jquiroga.movies.BuildConfig
 import com.jquiroga.movies.R
 import com.jquiroga.movies.core.platform.BaseFragment
 import com.jquiroga.movies.databinding.FragmentLoginBinding
