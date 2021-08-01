@@ -13,6 +13,20 @@ object SdkVersions {
     const val targetSdk = 30
 }
 
+object DebugSigning {
+    const val keyAlias = "key.alias.debug"
+    const val keyPassword = "key.password.debug"
+    const val storeFile = "store.file.debug"
+    const val storePassword = "store.password.debug"
+}
+
+object ReleaseSigning {
+    const val keyAlias = "key.alias.release"
+    const val keyPassword = "key.password.release"
+    const val storeFile = "store.file.release"
+    const val storePassword = "store.password.release"
+}
+
 object ToolsVersions {
     const val buildTools = "30.0.2"
 }

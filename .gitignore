@@ -49,6 +49,7 @@ captures/
 *.ipr
 *~
 *.swp
+*.jks
 app.properties
 keystore.properties
 dexguard.properties

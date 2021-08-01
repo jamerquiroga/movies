@@ -1,0 +1,21 @@
+android {
+    signingConfigs {
+        def keystore = new Properties()
+        def keyPath = rootProject.file("$rootDir/config/keystore/keystore.properties")
+        assert keyPath
+        keystore.load(new FileInputStream(file(keyPath)))
+
+        debug {
+            keyAlias keystore[DebugSigning.keyAlias]
+            keyPassword keystore[DebugSigning.keyPassword]
+            storeFile file(keystore[DebugSigning.storeFile])
+            storePassword keystore[DebugSigning.storePassword]
+        }
+        release {
+            keyAlias keystore[ReleaseSigning.keyAlias]
+            keyPassword keystore[ReleaseSigning.keyPassword]
+            storeFile file(keystore[ReleaseSigning.storeFile])
+            storePassword keystore[ReleaseSigning.storePassword]
+        }
+    }
+}
